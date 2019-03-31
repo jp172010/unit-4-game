@@ -11,13 +11,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row" id="header">
             <header>Crystal Collector!</header>
         </div>
-        <div class="row">
+        <br>
+        <div class="row" id="gInst">
             <h1>
                 Game Instructions:
             </h1>
+        </div>
+        <br>
+        <div class="row" id="inst">
             <p>
                 You will be given a random number at the start of the game.
             </p>
@@ -28,27 +32,33 @@
                 You win the game by matching your total score with the target number. If your total score goes above the target number you lose.
             </p>
         </div>
+        <br>
         <div class ="row">
-            <div class="col-md-4">
+            <div class="col-md-4" id=tNum>
                 <h1>
-                    Target Number: 0
+                    Target Number: <span id="targetNumber">0</span>
                 </h1>
             </div>
-            <div class="col-sm-2">
+            <div class="col-md-4">
+                # of Clicks: <span id="clicks">0</span>
+            </div>
+            <div class="col-sm-4" id="wStreak">
                 <h2>
-                    Win streak: 0
+                    Win streak: <span id="wins">0</span>
                 </h2>
             </div>
         </div>
-        <div class="row">
-            <img>
-            <img>
-            <img>
-            <img>
+        <br>
+        <div class="row" id="crystal">
+            <img class="crystal" id="c1" src="assets/images/crystal1.jpg" alt="crystal 1" style="width:100px;height:120px;">
+            <img class="crystal" id="c2" src="assets/images/crystal2.png" alt="crystal 2" style="width:100px;height:120px;">
+            <img class="crystal" id="c3" src="assets/images/crystal3.jpg" alt="crystal 3" style="width:100px;height:120px;">
+            <img class="crystal" id="c4" src="assets/images/crystal4.jpg" alt="crystal 4" style="width:100px;height:120px;">
         </div>
-        <div class="row">
+        <br>
+        <div class="row" id="total">
             <h1>
-                Your Total Score: 0
+                Your Total Score: <span id="tScore">0</span>
             </h1>
         </div>
     </div>
@@ -56,5 +66,6 @@
 
     
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/javascript/game.js"></script>
 </html>
